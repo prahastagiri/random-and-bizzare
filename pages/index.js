@@ -1,21 +1,56 @@
-import Link from 'next/link'
+import Landing_Header from '@/components/LandingPage_Components/landing_header';
+import Landing_Hero from '@/components/LandingPage_Components/landing_hero';
+import Project_Group from '@/components/LandingPage_Components/project_group'
+import PROJECT_LIST from '@/data/LandingPage_Data.json';
 
 export default function Home() {
   return (
     <div className='landing-page-main-container'>
-      <div className='landing-page-title-container'>
+      <section className='bg-[--bg-two]'>
+        <Landing_Header/>
+        <Landing_Hero/>
+      </section>
+      <section className='bg-[--bg-three]'>
+        <div>  
+          Current Work
+        </div>
+      </section>
+      <section className='bg-[--bg-one]'>
+        <div className='landing-page-mini-projects'>
+          
+          <div>
+            {/* TODO:
+                  - SORTING BY TIME
+                  - SORTING BY TAG
+                  - ADD DB TO SAVE PROJECT DATA AND IMAGES
+                  - BEAUTIFY PROJECTS
+            */}
+          </div>
+          <Project_Group projects={PROJECT_LIST}/>
+        </div>
+      </section>
+      <section className='bg-[--bg-four]'>
+        <div>  
+          Blog
+        </div>
+      </section>
+      
+      
+      {/* <div className='landing-page-title-container'>
         <p className='landing-page-main-title'>Random & Bizzare</p>
-        <p className="landing-page-main-desc" style={{textAlign:"center"}}>A Collection of Mini Projects created yours truly</p>
-      </div>
+        <p className="landing-page-main-desc" style={{textAlign:"center"}}>A Collection of Mini Projects created by yours truly</p>
+      </div> */}
       
       <div className='landing-page-mini-projects'>
-        <p>Mini Projects </p>
-        <ul className='landing-page-mini-projects-list'>
-          <li><Link href="/mini_projects/antd_tutorial">Tutorial Popup with Steps</Link></li>
-          <li><Link href="/mini_projects/react_collapse">Collapsible with third party collapse library</Link></li>
-          <li><Link href="/wedding">Personal wedding website</Link></li>
-          <li><Link href="/spa-form">Single Page Form</Link></li>
-        </ul>
+        
+        <div>
+          {/* TODO:
+                - SORTING BY TIME
+                - SORTING BY TAG
+                - ADD DB TO SAVE PROJECT DATA AND IMAGES
+           */}
+        </div>
+        {/* <Project_Group projects={PROJECT_LIST}/> */}
       </div>
       
       <style jsx global>
@@ -29,7 +64,6 @@ export default function Home() {
           padding: 16px 24px
         }
         .landing-page-main-container{
-          max-width: 500px;
           margin: auto;
         }
         .landing-page-main-title{

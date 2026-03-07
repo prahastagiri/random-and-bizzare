@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --default-font-family: "Zalando Sans", sans-serif; 
+  --default-header-font-family: "DM Serif Text", sans-serif;
+  --bg-one: #ffe3b3;
+  --bg-two: #ffc872;
+  --bg-three: #30a0e0;
+  --bg-four: #006bbb;
 }
 
 @media (prefers-color-scheme: dark) {
