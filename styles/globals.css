@@ -12,6 +12,16 @@
   --bg-two: #ffc872;
   --bg-three: #30a0e0;
   --bg-four: #006bbb;
+  --tag-one: #ff595e;
+  --tag-two: #ffca3a;
+  --tag-three: #8ac926;
+  --tag-four: #1982c4;
+  --tag-five: #6a4c93;
+  --tag-six: #283d3b;
+  --tag-seven: #197278;
+  --tag-eight: #c44536;
+  --tag-nine: #772e25;
+  --tag-ten: #f7a07;
 }
 
 @media (prefers-color-scheme: dark) {

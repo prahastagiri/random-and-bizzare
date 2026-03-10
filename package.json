@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.1.0",
     "@dicebear/collection": "^7.0.4",
     "@dicebear/core": "^7.0.4",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

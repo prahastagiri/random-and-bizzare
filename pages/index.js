@@ -11,23 +11,18 @@ export default function Home() {
         <Landing_Hero/>
       </section>
       <section className='bg-[--bg-three]'>
-        <div>  
-          Current Work
-        </div>
-      </section>
-      <section className='bg-[--bg-one]'>
-        <div className='landing-page-mini-projects'>
-          
-          <div>
-            {/* TODO:
+          <div className='landing-page-mini-projects'>
+          {/* TODO:
                   - SORTING BY TIME
                   - SORTING BY TAG
                   - ADD DB TO SAVE PROJECT DATA AND IMAGES
                   - BEAUTIFY PROJECTS
             */}
-          </div>
-          <Project_Group projects={PROJECT_LIST}/>
+          <Project_Group projects={PROJECT_LIST} navcolor={"bg-[--bg-three]"}/>
         </div>
+      </section>
+      <section className='bg-[--bg-one]'>
+        
       </section>
       <section className='bg-[--bg-four]'>
         <div>  

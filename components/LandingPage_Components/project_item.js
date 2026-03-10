@@ -20,89 +20,33 @@ function Project_Item({project}) {
     }
 
     const createTags = (tags) => {
-        // COLOR_THEME
         return tags.map((tag,index) => {
-            var tagStyle = {
-                padding:"4px", 
-                border:`1px solid #${COLOR_THEME[index]}`, 
-                margin:"0px", 
-                color: `#${COLOR_THEME[index]}`,
-                width:"fit-content",
-                borderRadius:"4px",
-            }
-            
-            return <p style={tagStyle}>{tag}</p>
+            return <p style={{background:"#"+COLOR_THEME[index]}} key={tag} className={`px-2 py-1 flex justify-center items-center text-white font-medium text-xs rounded-full m-0 font-[family-name:--default-font-family] w-fit`}>{tag}</p>
         })
     }
 
     return (
-        <div className='project-item__wrapper' key={project.url} onClick={()=>handleRedirectToProject(project.url)}>
-            <div className='project-item__container'>
-                <div className='project-item__head'>
-                    <div className='project-item__snapshot'/>
-                </div>
-                <div className='project-item__body'>
-                    <div className='project-tags__container'>
-                        {createTags(project.tags)}
+        // https://dribbble.com/shots/21603404-Task-Management-Dashboard-Project-Details-Card
+        <div className='project-item__wrapper bg-white rounded-2xl' key={project.url} onClick={()=>handleRedirectToProject(project.url)}>
+            <div className='border border-[#efefef] opacity-100 w-96 shadow-md rounded-lg cursor-pointer hover:opacity-70 duration-300 transition-all flex flex-col justify-between'>
+                <main className='flex flex-col justify-between'>
+                    <header className='project-item__head mb-4'>
+                        <div className='h-48 bg-[url(https://i.pinimg.com/736x/c4/96/9a/c4969aaedbc096c09b35e31abd11e2ec.jpg)] bg-no-repeat bg-cover bg-center'/>
+                    </header>
+                    <div className='px-2'>
+                        <p className='mb-0 text-black/30 font-[family-name:--default-font-family] font-medium text-xs'><ClockCircleOutlined /> {createDate(project.datetime)}</p>
+                        <p className='text-2xl font-medium font-[family-name:--default-font-family] m-0'>{project.title}</p>
                     </div>
-                    <div className='project-title'>
-                        {project.title}
-                    </div>
-                </div>
-                <div className='project-item__footer'>
-                    <p className='project-item__datetime'><ClockCircleOutlined /> {createDate(project.datetime)}</p>
+                </main>
+                <article className='mx-2 rounded-lg bg-slate-300 p-2'>
+                    <p>
+                        {project.description}
+                    </p>
+                </article>
+                <div className='mt-auto px-4 py-2 text-right font-[family-name:--default-font-family]'>
+                    <div className='flex gap-2 justify-end'>{createTags(project.tags)}</div>
                 </div>
             </div>
-            <style jsx global>
-            {`
-                .project-title{
-                    padding:8px 0px;
-                    font-size:22px;
-                    font-weight: 500;
-                }
-                .project-tags__container{
-                    display:flex;
-                    gap:8px;
-                }
-                .project-item__datetime{
-                    margin-bottom:0px;
-                    color:#aeaeae;
-                }
-                .project-item__footer{
-                    margin-top:auto;
-                    padding:8px 16px;
-                    text-align:right;
-                }
-                .project-item__body{
-                    padding:8px 16px;
-                }
-                .project-item__snapshot{
-                    background:url('https://i.pinimg.com/736x/c4/96/9a/c4969aaedbc096c09b35e31abd11e2ec.jpg');
-                    background-repeat:no-repeat;
-                    background-position:center;
-                    background-size: contain;
-                    height:120px;
-                }
-                .project-item__container{
-                    border:0.5px solid #efefef;
-                    opacity:1;
-                    transition: 0.3s all;
-                    width:24em;
-                    height:24em;
-                    box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.5);
-                    -webkit-box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.5);
-                    -moz-box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.5);
-                    border-radius:8px;
-                    display:flex;
-                    flex-direction:column;
-                }
-                .project-item__container:hover{
-                    cursor:pointer;
-                    opacity:0.7;
-                    transition: 0.3s all;
-                }
-            `}
-            </style>
         </div>
     )
 
