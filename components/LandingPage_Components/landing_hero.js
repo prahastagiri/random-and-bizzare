@@ -3,8 +3,16 @@ import { SVG_ICONS } from '@/Assets/Icons/IconsCollections'
 const { Download } = SVG_ICONS
 
 function Landing_Hero() {
+    const scrollToWorks = () => {
+        const targetSection = document.getElementById('project');
+        targetSection.scrollIntoView({
+            behavior: 'smooth', // Smooth animation
+            block: 'start'      // Aligns the top of the element to the top of the viewport
+        });
+        
+    }
     return (
-        <div className='pt-6 flex flex-col md:flex-row justify-between px-6 md:px-32 pb-12 gap-4 md:gap-12 h-full'>
+        <div className='pt-6 flex flex-col md:flex-row justify-between px-6 md:px-32 pb-12 gap-4 md:gap-12 h-screen'>
             <div className='flex-1 flex justify-center items-center'>
                 <div className='text-7xl font-[family-name:--default-header-font-family] font-medium'>
                     <p className='m-0 mb-0'>Hello!</p>
@@ -15,7 +23,7 @@ function Landing_Hero() {
                 </div>
             </div>
             <div className='flex-1 flex justify-center items-center'>
-                <article className='flex flex-col md:flex-row gap-6 px-6 py-4 wd:w-fit bg-[--bg-one] backdrop-blur-xl rounded-2xl w-full '>
+                <article className='flex flex-col md:flex-row gap-6 px-6 py-4 wd:w-fit bg-[--bg-one] backdrop-blur-xl rounded-2xl w-fit '>
                     <section className='relative'>
                         <div className='w-[160px] overflow-hidden aspect-square rounded-full mx-auto my-2'>
                             <img src="https://images.pexels.com/photos/33018576/pexels-photo-33018576.jpeg" />
@@ -57,8 +65,8 @@ function Landing_Hero() {
                             <button className='bg-transparent border-2 border-[--bg-four] rounded-md p-2 w-fit'>
                                 <p className='text-sm font-[family-name:--default-font-family] m-0 font-medium text-[--bg-four]'>Get in touch</p>
                             </button>
-                            <button className='bg-transparent border-2 border-[--bg-four] rounded-md p-2 w-fit'>
-                                <p className='text-sm font-[family-name:--default-font-family] m-0 font-medium text-[--bg-four]'>Look at my work</p>
+                            <button className='bg-transparent border-2 border-[--bg-four] rounded-md p-2 w-fit' onClick={scrollToWorks}>
+                                <p className='text-sm font-[family-name:--default-font-family] m-0 font-medium text-[--bg-four]'>Look at my works</p>
                             </button>
                         </nav>
                     </section>
