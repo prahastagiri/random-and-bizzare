@@ -4,35 +4,22 @@ const { Download } = SVG_ICONS
 
 function Landing_Hero() {
     return (
-        <div className='mt-28 flex justify-between px-32 pb-12 gap-12'>
-            <div className='flex-1'>
-                <div>
-                    <p className='m-0 mb-0 text-7xl font-[family-name:--default-header-font-family] font-medium'>Hello!</p>
-                    <p className='m-0 mb-6 text-7xl font-[family-name:--default-header-font-family] font-medium'>I am Prahasta Giri</p>
-                    <p className='mb-8 w-2/3 text-base font-[family-name:--default-font-family] font-light'>
-                        I cook 3-minutes ramen in 2 minutes just to prove that I can have my own rule and walking this earth proudly with my standard.
+        <div className='pt-6 flex flex-col md:flex-row justify-between px-6 md:px-32 pb-12 gap-4 md:gap-12 h-full'>
+            <div className='flex-1 flex justify-center items-center'>
+                <div className='text-7xl font-[family-name:--default-header-font-family] font-medium'>
+                    <p className='m-0 mb-0'>Hello!</p>
+                    <p className='m-0 mb-6'>I am Prahasta Giri</p>
+                    <p className='mb-8 md:w-2/3 w-full text-base font-[family-name:--default-font-family] font-light'>
+                        I cook 3-minutes ramen in 2 minutes for I am a rebel and a nuisance.
                     </p>
-                    {/* <p className='m-0 mb-6 text-7xl font-[family-name:--default-header-font-family] font-medium'>Prahasta Giri</p> */}
-                    {/* <div className='flex gap-2 rounded-lg px-4 py-2 w-fit bg-white/30 backdrop-blur-sm'>
-                <div className='w-12 overflow-hidden aspect-square rounded-lg'>
-                  <img src="https://images.pexels.com/photos/33018576/pexels-photo-33018576.jpeg" />
-                </div>
-                <div>
-                  <p className='m-0 text-lg font-[family-name:--default-font-family] font-medium'>Software Engineer</p>
-                  <p className='m-0 text-base font-[family-name:--default-font-family]'>Front-End Developer</p>
-                </div>
-              </div> */}
                 </div>
             </div>
-            <div className='flex-1'>
-                <article className='flex gap-6 px-6 py-4 w-fit bg-[--bg-one] backdrop-blur-xl rounded-2xl'>
+            <div className='flex-1 flex justify-center items-center'>
+                <article className='flex flex-col md:flex-row gap-6 px-6 py-4 wd:w-fit bg-[--bg-one] backdrop-blur-xl rounded-2xl w-full '>
                     <section className='relative'>
-                        <div className='w-[160px] overflow-hidden aspect-square rounded-full m-2'>
+                        <div className='w-[160px] overflow-hidden aspect-square rounded-full mx-auto my-2'>
                             <img src="https://images.pexels.com/photos/33018576/pexels-photo-33018576.jpeg" />
                         </div>
-                        {/* <button className='bg-[--bg-four] rounded-full aspect-square w-fit px-2 absolute top-2 right-2'>
-                  <p className='text-base font-[family-name:--default-font-family] m-0 font-medium text-[--bg-one]'>CV</p>
-                </button> */}
                         <button className='bg-[--bg-four] rounded-lg px-2 py-1 flex gap-1 m-auto'>
                             <p className='text-base font-[family-name:--default-font-family] m-0 font-medium text-[--bg-one]'>Resume</p>
                             <Download width={"24"} height={"24"} className="stroke-[--bg-one]" />
