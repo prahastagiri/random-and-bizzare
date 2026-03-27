@@ -11,7 +11,7 @@ export default function Home() {
         <Landing_Hero/>
       </section>
       <section className='bg-[--bg-three]'>
-          <div className='landing-page-mini-projects'>
+          <div className='landing-page-mini-projects h-screen' id="project">
           {/* TODO:
                   - SORTING BY TIME
                   - SORTING BY TAG

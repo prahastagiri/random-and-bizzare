@@ -12,7 +12,7 @@ export default function Landing_Header() {
         return ListMenu.map( (menu,index) => <li key={"landing-nav-"+index} className='py-2 px-4 rounded-[28px] cursor-pointer flex flex-col justify-center' >{menu}</li>)
     }
     return (
-        <ul className={`list-none mb-0 m-auto px-12 pt-2 flex justify-between align-middle rounded-full w-full transition-all font-[family-name:--default-font-family] font-medium text-base`}>
+        <ul className={`hidden list-none mb-0 m-auto justify-between align-middle rounded-full w-full transition-all font-[family-name:--default-font-family] font-medium text-baselg:px-12 lg:pt-2 sm:p-0`}>
             {MenuItem()}
         </ul>
     )
